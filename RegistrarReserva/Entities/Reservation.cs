@@ -31,7 +31,7 @@ namespace RegistrarReserva.Entities
         {
             StringBuilder sb = new StringBuilder();
             sb.Append($"Room {RoomNumber}, check-in: {CheckIn:dd/MM/yyyy}" +
-                $"check-out: {CheckOut:dd//MM/yyyy}, {Duration()} nights");
+                $", check-out: {CheckOut:dd/MM/yyyy}, {Duration()} nights");
             return sb.ToString();
         }
     }
