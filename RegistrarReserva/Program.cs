@@ -13,10 +13,19 @@ namespace RegistrarReserva
             DateTime checkIn = DateTime.Parse(Console.ReadLine());
             Console.Write("Check-out date (dd/MM/yyyy): ");
             DateTime checkOut = DateTime.Parse(Console.ReadLine());
-            Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
-            Console.WriteLine($"Reservation: {reservation}");
-            Console.WriteLine();
 
+
+            if (checkOut <= checkIn)
+            {
+                Console.WriteLine("Error in reservation: Check-out date must be after " +
+                    "check-in date");
+            }
+            else
+            {
+                Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+                Console.WriteLine($"Reservation: {reservation}");
+                Console.WriteLine();
+            }
 
 
         }
